@@ -1,0 +1,60 @@
+Storage:
+
+    Data:
+
+      Free: 275,04 GB (275 036 651 520 bytes)
+      Capacity: 494,33 GB (494 332 366 848 bytes)
+      Mount Point: /System/Volumes/Data
+      File System: APFS
+      Writable: Yes
+      Ignore Ownership: No
+      BSD Name: disk3s5
+      Volume UUID: DAF75F05-C5FD-4201-B3E1-70D636DA3482
+      Physical Drive:
+          Device Name: APPLE SSD AP0512Z
+          Media Name: AppleAPFSMedia
+          Medium Type: SSD
+          Protocol: Apple Fabric
+          Internal: Yes
+          Partition Map Type: Unknown
+          S.M.A.R.T. Status: Verified
+
+    Macintosh HD:
+
+      Free: 275,04 GB (275 036 651 520 bytes)
+      Capacity: 494,33 GB (494 332 366 848 bytes)
+      Mount Point: /
+      File System: APFS
+      Writable: No
+      Ignore Ownership: No
+      BSD Name: disk3s1s1
+      Volume UUID: 5C9C89AC-0748-4ED0-AF4A-13E00CA90EDF
+      Physical Drive:
+          Device Name: APPLE SSD AP0512Z
+          Media Name: AppleAPFSMedia
+          Medium Type: SSD
+          Protocol: Apple Fabric
+          Internal: Yes
+          Partition Map Type: Unknown
+          S.M.A.R.T. Status: Verified
+
+    VMware Fusion:
+
+      Free: 83,9 MB (83 873 792 bytes)
+      Capacity: 1,08 GB (1 079 828 480 bytes)
+      Mount Point: /Volumes/VMware Fusion
+      File System: HFS+
+      Writable: No
+      Ignore Ownership: Yes
+      BSD Name: disk4s1
+      Volume UUID: 2C45AFD5-DB58-3821-A2E3-B769BCDA3B79
+      Physical Drive:
+          Device Name: Disk Image
+          Media Name: Apple Disk Image Media
+          Medium Type: SSD
+          Protocol: Disk Image
+          Internal: No
+          Partition Map Type: GPT (GUID Partition Table)
+
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    12Gi   256Gi     5%    455k  2.7G    0%   /
