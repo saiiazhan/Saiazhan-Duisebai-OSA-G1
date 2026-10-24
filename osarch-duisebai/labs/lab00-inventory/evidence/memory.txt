@@ -1,0 +1,6 @@
+Memory:
+
+      Memory: 16 GB
+      Type: LPDDR5
+      Manufacturer: Micron
+

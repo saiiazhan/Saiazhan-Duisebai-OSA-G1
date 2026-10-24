@@ -1,0 +1,4 @@
+Distributor ID:	Ubuntu
+Description:	Ubuntu 26.10
+Release:	26.10
+Codename:	stonking
