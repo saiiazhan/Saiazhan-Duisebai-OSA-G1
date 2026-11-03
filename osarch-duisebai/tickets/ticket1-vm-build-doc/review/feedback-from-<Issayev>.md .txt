@@ -1,0 +1,23 @@
+# Feedback on <Duisebai>'s BUILD.md
+Reviewer: Isko (isa)
+Commit reviewed: <https://github.com/saiiazhan/Saiazhan-Duisebai-OSA-G1/tree/main/osarch-duisebai>
+Hypervisor I used: VMware Workstation Pro 17 (Host: Windows 11 Pro 64-bit, x86_64 architecture)
+
+## First step where I got stuck
+Step number: Step 1 / "Before you start"
+What the step says: "On a Mac with Apple Silicon (M1, M2, M3, M4)... download the ARM64 installer. If the file name says 'amd64' or 'x86', it is the wrong one." / "Hypervisor: VMware Fusion."
+What I did: Attempted to reproduce the guide step-by-step using my workstation host (Windows 11 x86_64).
+What happened / what I had to guess: The guide is strictly coupled to macOS and Apple Silicon hardware. VMware Fusion is an exclusive macOS application and cannot run on Windows (where VMware Workstation is used). Furthermore, downloading the mandated ARM64 ISO leads to an unbootable VM on an x86_64 processor without slow software emulation. The UI steps (such as dragging an ISO into the VMware Fusion dashboard) do not exist in VMware Workstation. To test the rest of the author's logic, I had to stop following the text literally, obtain x86_64 ISO images, and translate the hypervisor wizard steps to Windows myself.
+
+## Other places I hesitated
+- Step 6 (Windows Disk Capacity): In the disk allocation section, the author left an unedited template placeholder: [explain your own reason], failing to provide technical justification for the chosen disk size or allocation type (single file vs. split).
+- Step 8 (Windows Installation Workflow): The entire Windows installation procedure is missing and replaced with a placeholder: [add the steps and screenshots you saw]. Installing Windows 11 on a virtual machine requires navigating partition setup, account creation, and bypassing mandatory Microsoft account/network checks via OOBE\BYPASSNRO. A non-technical reader (such as the office manager) would be completely blocked here.
+- Step 10 & "If something goes wrong": Step 10 instructs that if pinging Windows fails, the reader should refer to the "If something goes wrong" section. However, that section at the bottom of the document is blank and contains only the drafting prompt [Add the real problem from your own build and how you fixed it.]. The required fix (opening PowerShell as Administrator and enabling the inbound ICMPv4 firewall rule) is omitted.
+- Step 4 (Ubuntu Server Setup): The step tells the user to create credentials, but does not specify whether to select the OpenSSH server package, which is essential for remote administration.
+
+## Settings I would not have chosen without the document
+- Allocating 6 GB RAM to a headless Ubuntu Server VM (Step 2): This is unusually generous for a CLI-only Linux server (which typically runs comfortably on 1–2 GB), but the author justified this allocation within the boundaries of a 16 GB host budget.
+- Network Mode selection ("Share with my Mac" / NAT): The explanation that Bridged networking fails on university/office Wi-Fi due to MAC address filtering is well-reasoned and accurate.
+
+## One thing that worked well
+- The explicit explanation in the "Before you start" section regarding the distinction between ARM64 and x86/amd64 architectures is exceptionally clear and prevents Mac users from downloading non-functional ISO images.
