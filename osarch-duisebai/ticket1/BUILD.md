@@ -2,19 +2,19 @@
 
 **Who this is for:** you do not need to know anything about servers. Follow the steps in order and do not skip the "Check" lines: they tell you if the step worked.
 
-**What you get at the end:** two "virtual computers" that live inside one real Mac: one with Linux (Ubuntu), one with Windows 11. A new developer can break them as much as he likes, and you can put them back in one minute.
+**What you get at the end:** two "virtual computers" that live inside one real Mac: one with Linux (Ubuntu), one with Windows 11. A new developer can break them as much as he likes, and you can put them back to a clean state in a minute.
 
 ## Before you start
 
 You need:
 
-- A Mac with the free-to-download program **VMware Fusion** installed.
+- A Mac with the program **VMware Fusion** installed.
 - Two installation files (called "ISO" or "disk image"), downloaded in advance:
-  - Ubuntu Server for **ARM64** (from ubuntu.com)
-  - Windows 11 for **ARM64** (from Microsoft)
-- About 90 GB of free space and 16 GB of memory on the Mac.
+  - Ubuntu Server for **ARM64**, for example `ubuntu-26.10-live-server-arm64.iso` (from ubuntu.com)
+  - Windows 11 for **ARM64**, for example `Windows11_Client_arm64_ru-ru_...iso` (from Microsoft). Ours is the Russian edition, so the Windows installer screens are in Russian.
+- About 120 GB of free space and 16 GB of memory on the Mac. (The two disks together are up to 84 GB, and snapshots take extra room.)
 
-> **Why ARM64 and not the usual version:** newer Macs (with M1, M2, M3, M5 chips) use a different processor type from most PCs. A normal Windows or Ubuntu file will not start. If the file name says "amd64" or "x86", it is the wrong one.
+> **Why ARM64 and not the usual version:** Macs with Apple chips (M1, M2, M3, M5) use a different processor type from most PCs. A normal Windows or Ubuntu file will not start. If the file name says "amd64" or "x86", it is the wrong one.
 
 > **Windows licence:** Windows needs a licence key to be used after the trial. Ask whoever buys software for the company; this document cannot supply one.
 
@@ -26,35 +26,42 @@ In VMware Fusion open the menu **File → New**, then drag the Ubuntu ISO into t
 
 ![](evidence/01-new-vm-wizard.png)
 
-Why: the wizard sets up everything for you; you do not need to build a virtual computer part by part.
+Why: the wizard sets up the virtual computer for you, so you do not need to build it part by part.
 
 > Check: the window shows the name of the Ubuntu file you dragged.
 
 ### Step 2. Choose the size of the machine
 
-Open the machine's **Settings** and set: **2 processor cores**, **6 GB memory**, **20 GB disk**.
+On the last screen of the wizard (the one called "Finish") you see a summary. Click **Customize Settings** if you need to change a number. We use **2 processor cores**, **6 GB memory**, **20 GB disk**.
 
 ![](evidence/02-disk-settings.png)
 
-Why these numbers: the Mac has 16 GB of memory, and the two machines together must leave enough for the Mac itself. A Linux server without a screen does not need more. The default is bigger than we need, so we lowered it.
+Why these numbers: the Mac has 16 GB of memory, and the two machines together must leave enough for the Mac itself. Ubuntu Server has no screen and no desktop, so it needs far less than Windows.
 
-> Check: Settings shows the numbers above.
+> Check: the summary shows the numbers above.
 
-### Step 3. Choose the network
+### Step 3. Check the network
 
-In Settings open **Network Adapter** and choose **Share with my Mac (NAT)**.
+Open the machine's **Settings → Network Adapter**. It must say **Share with my Mac (NAT)**. This is the choice the wizard makes by itself; do not change it.
 
 ![](evidence/03-network-adapter.png)
 
 Why NAT and not "Bridged": with NAT the virtual computer reaches the internet through the Mac, and nobody on the office network can reach it by accident. "Bridged" makes it a separate device on the office network, which the network may block.
 
-> Check: after Step 4, the command `ip addr` shows an address beginning with `172.16.` (it will be different on your Mac).
+> Check: after Step 4, the command `ip addr` shows an address that is different from the Mac's own address.
 
 ### Step 4. Install Ubuntu
 
-Start the machine and follow the installer. Choose the default answers unless a step below says otherwise. Create a user name and password and **write them down**.
+Start the machine. A text installer appears. Go through its screens in order:
 
-Why: the installer asks for a user name once and never again; losing it means reinstalling.
+1. **Language and keyboard:** pick your language and keyboard layout.
+2. **Network:** leave the automatic (DHCP) setting. Why: the machine gets an address by itself, and there is nothing to type.
+3. **Storage:** use the whole 20 GB disk with the default layout. Why: this is a test machine and nobody needs a special layout.
+4. **Profile:** enter a server name, a user name and a password and **write them down**. When you type the password, no characters appear; this is normal.
+5. **SSH:** tick **Install OpenSSH server**. Why: it lets you copy files to and from the machine later (we used it to collect the evidence files).
+6. Wait for the installation to finish, then choose **Reboot**. If the installer says to remove the installation disc, press Enter.
+
+Our machine uses the server name `saia` and the user `saia`; use your own.
 
 > Check: after restart you see a text screen asking for `login:`. Type your user name and password.
 
@@ -67,7 +74,7 @@ uname -a
 ping -c 3 8.8.8.8
 ```
 
-![](evidence/04-guest-uname.txt)
+Our output is saved here: [uname output](evidence/04-guest-uname.txt)
 
 > Check: `uname -a` prints a line starting with `Linux`; `ping` shows "0% packet loss".
 
@@ -75,19 +82,19 @@ ping -c 3 8.8.8.8
 
 ### Step 6. Start another new machine
 
-Repeat Step 1 with the **Windows 11 ARM64** file. Set **2 cores, 4 GB memory, 64 GB disk** (**check these against your own settings**).
+Repeat Step 1 with the **Windows 11 ARM64** file. Our settings are **2 cores, 4 GB memory, 64 GB disk** (**check these against your own settings**).
 
-Why: Windows needs more than Linux to be comfortable, and 64 GB is the smallest disk the Windows installer accepts. [explain your own reason]
+Why: Windows is heavier than a Linux server. 64 GB is the minimum storage Windows 11 requires. 4 GB of memory plus the 6 GB for Ubuntu leaves 6 GB of the Mac's 16 GB for macOS itself.
 
-### Step 7. Use the same network
+### Step 7. Check the network
 
-Choose **Share with my Mac (NAT)** again, **the same as Step 3**.
+In **Settings → Network Adapter** the Windows machine must also say **Share with my Mac (NAT)**.
 
 Why: both machines must be on the same network to see each other. If one used NAT and the other Bridged, they could not talk.
 
 ### Step 8. Install Windows
 
-Follow the Windows installer. [add the steps and screenshots you saw]
+Start the machine and follow the Windows installer. If a window asks for a user name and password, type them and **write them down**. If it asks for a product key and you do not have one yet, you can skip it and enter it later (see the licence note at the top). Our Windows is the Russian edition, so the installer screens are in Russian; the order of the screens is the same in any language. The machine restarts by itself a few times; wait until the desktop appears.
 
 > Check: you see the Windows desktop.
 
@@ -95,15 +102,17 @@ Follow the Windows installer. [add the steps and screenshots you saw]
 
 ### Step 9. Find each machine's address
 
-On Ubuntu type `ip addr` and note the address beginning `172.16.`. On Windows open **PowerShell** and type `ipconfig`.
+On Ubuntu type `ip addr` and note the address. On Windows open **PowerShell** and type `ipconfig`; the address is the line "IPv4".
+
+> Addresses change. After a pause or restart a machine may get a new one (ours went from `.141` to `.143` to `.145`). Look at the address again before every test.
 
 ### Step 10. Test from one to the other
 
 From Ubuntu, type `ping -c 3 <Windows address>`. From Windows, type `ping <Ubuntu address>`.
 
-![](evidence/05-ping-between-guests.txt)
+Our output is saved here: [ping between guests](evidence/05-ping-between-guests.txt)
 
-> Check: both show replies. If Windows says "Request timed out" but Ubuntu works, the Windows firewall is blocking; see the "If something goes wrong" section.
+> Check: both show replies and "0% packet loss". If Ubuntu cannot reach Windows, first check that Windows is running and that you used its current address (see Step 9). If both are right, the Windows firewall may be blocking incoming ping.
 
 ## Part 4. Save a clean copy (so nothing can be broken for good)
 
@@ -123,4 +132,6 @@ Why: a snapshot is a saved moment. If the developer breaks the machine, you go b
 
 ## If something goes wrong
 
-[Add the real problem from your own build and how you fixed it.]
+**"Operation timed out" or "Destination Host Unreachable" when connecting to a machine.** The machine's address has probably changed. Look at its current address (Step 9) and try again with that one.
+
+**The Ubuntu disk looks smaller than 20 GB.** After the install the Ubuntu welcome message says the main disk space is only about 9.75 GB, although we gave the machine 20 GB. This does not break anything for a test machine, but if the developer needs more room, check the storage screen of the installer (Step 4, item 3).
