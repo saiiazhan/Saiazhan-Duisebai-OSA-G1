@@ -1,0 +1,14 @@
+Linux saia 7.3.0-10-generic #10-Ubuntu SMP PREEMPT_DYNAMIC Thu Oct 22 07:54:48 UTC 2026 aarch64 GNU/Linux
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp2s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:a3:61:fc brd ff:ff:ff:ff:ff:ff
+    altname enx000c29a361fc
+    inet 172.16.151.143/24 metric 100 brd 172.16.151.255 scope global dynamic enp2s0
+       valid_lft 1700sec preferred_lft 1700sec
+    inet6 fe80::20c:29ff:fea3:61fc/64 scope link proto kernel_ll 
+       valid_lft forever preferred_lft forever
