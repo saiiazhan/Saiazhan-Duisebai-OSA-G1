@@ -1,0 +1,10 @@
+NAME                       SIZE TYPE FSTYPE      MOUNTPOINT
+sr0                        2.9G rom  iso9660     
+nvme0n1                     20G disk             
+├─nvme0n1p1                953M part vfat        /boot/efi
+├─nvme0n1p2                1.8G part ext4        /boot
+└─nvme0n1p3               17.3G part LVM2_member 
+  └─ubuntu--vg-ubuntu--lv   10G lvm  ext4        /
+nvme0n2                      2G disk             
+nvme0n4                      2G disk             
+nvme0n3                      2G disk             

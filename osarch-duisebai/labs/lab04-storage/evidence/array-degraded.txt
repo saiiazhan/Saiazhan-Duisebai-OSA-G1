@@ -1,0 +1,37 @@
+Tue Nov 10 11:02:03 PM UTC 2026
+Personalities : [raid1] 
+md0 : active raid1 nvme0n3p1[1](F) nvme0n2p1[0]
+      2093056 blocks super 1.2 [2/1] [U_]
+      bitmap: 0/1 pages [0KB], 65536KB chunk
+
+unused devices: <none>
+/dev/md0:
+           Version : 1.2
+     Creation Time : Tue Nov 10 22:10:37 2026
+        Raid Level : raid1
+        Array Size : 2093056 (2044.00 MiB 2143.29 MB)
+     Used Dev Size : 2093056 (2044.00 MiB 2143.29 MB)
+      Raid Devices : 2
+     Total Devices : 2
+       Persistence : Superblock is persistent
+
+     Intent Bitmap : Internal
+
+       Update Time : Tue Nov 10 23:01:37 2026
+             State : clean, degraded 
+    Active Devices : 1
+   Working Devices : 1
+    Failed Devices : 1
+     Spare Devices : 0
+
+Consistency Policy : bitmap
+
+              Name : saia:0  (local to host saia)
+              UUID : 31abc838:8c179423:2a08eeaf:1bd72d6d
+            Events : 20
+
+    Number   Major   Minor   RaidDevice State
+       0     259        7        0      active sync   /dev/nvme0n2p1
+       -       0        0        1      removed
+
+       1     259        8        -      faulty   /dev/nvme0n3p1

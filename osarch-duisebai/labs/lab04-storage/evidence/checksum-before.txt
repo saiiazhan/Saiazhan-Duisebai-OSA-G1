@@ -1,0 +1,2 @@
+c8cd49367327bffc5cf7757bc1eb69bcf6d26112d4bbecd6dacf5e331e7f5396  /mnt/mirror/proof.txt
+4fdf10ca637dd96caef03b6624d42a940bc091af169385fb2efdd4e60e862842  /mnt/mirror/random.bin
