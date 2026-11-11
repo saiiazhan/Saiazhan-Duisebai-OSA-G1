@@ -1,0 +1,34 @@
+role,component,model,price_KZT,source,date
+accountant,CPU,AMD Ryzen 5 7600 BOX 100-100001015BOX (6c/12t; Wraith Stealth cooler in box; iGPU),99927,LS Computers via https://alfa.kz/parts/cpu/amd/ryzen_5/8277796 (listed 28 Oct; updated 23 Oct; oldest price in the sheet; re-check before ordering),2026-11-11
+accountant,Motherboard,Gigabyte A620M GAMING X AX (AM5; mATX; 4xDDR5; Wi-Fi 6E),66584,Vendara.kz via https://e-katalog.kz/GIGABYTE-A620M-GAMING-X-AX.htm (delivery from Almaty),2026-11-11
+accountant,RAM,Patriot PSD516G560081 DDR5-5600 16GB (1x16GB; 3 DIMM slots left free),119381,Flexcom via https://alfa.kz/parts/ram/patriot/ddr5/8525808 (listed 11 Nov 10:20),2026-11-11
+accountant,SSD,Kingston NV3 SNV3S/1000G 1TB M.2 NVMe PCIe 4.0,68748,Flexcom.kz via https://e-katalog.kz/KINGSTON-NV3.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+accountant,PSU,be quiet! Pure Power 12 M BN341 550W 80+ Gold,49821,Flexcom.kz via https://e-katalog.kz/BE-QUIET--BN341.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+accountant,Case,Zalman M5 Black (mATX; no PSU),25767,Flexcom.kz via https://e-katalog.kz/ZALMAN-M5.htm (delivery from Almaty),2026-11-11
+accountant,Monitor,AOC 27B3QA2/01 27in IPS 1920x1080 100Hz,59215,alfa.kz listing https://alfa.kz/peripherals/monitors/aoc/27b3qa2_01,2026-11-11
+accountant,OS,Windows 11 Professional 64-bit Russian DSP OEI DVD KZ-Only FQC-10548 (OEM licence),76980,Victory computers via https://alfa.kz/pc/soft/os/microsoft/oem/8578987,2026-11-11
+sales,CPU,AMD Ryzen 5 7600 BOX 100-100001015BOX (6c/12t; Wraith Stealth cooler in box; iGPU),99927,LS Computers via https://alfa.kz/parts/cpu/amd/ryzen_5/8277796 (listed 28 Oct; updated 23 Oct; oldest price in the sheet; re-check before ordering),2026-11-11
+sales,Motherboard,Gigabyte A620M GAMING X AX (AM5; mATX; 4xDDR5; Wi-Fi 6E),66584,Vendara.kz via https://e-katalog.kz/GIGABYTE-A620M-GAMING-X-AX.htm (delivery from Almaty),2026-11-11
+sales,RAM,Corsair Vengeance CMK32GX5M2B6400Z32 DDR5-6400 32GB (2x16GB kit),295448,Flexcom via https://alfa.kz/parts/ram/corsair/ddr5/8526044 (listed 11 Nov 12:53),2026-11-11
+sales,SSD,Kingston NV3 SNV3S/1000G 1TB M.2 NVMe PCIe 4.0,68748,Flexcom.kz via https://e-katalog.kz/KINGSTON-NV3.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+sales,PSU,be quiet! Pure Power 12 M BN341 550W 80+ Gold,49821,Flexcom.kz via https://e-katalog.kz/BE-QUIET--BN341.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+sales,Case,Zalman M5 Black (mATX; no PSU),25767,Flexcom.kz via https://e-katalog.kz/ZALMAN-M5.htm (delivery from Almaty),2026-11-11
+sales,Monitor,AOC 27B3QA2/01 27in IPS 1920x1080 100Hz,59215,alfa.kz listing https://alfa.kz/peripherals/monitors/aoc/27b3qa2_01,2026-11-11
+sales,OS,Windows 11 Professional 64-bit Russian DSP OEI DVD KZ-Only FQC-10548 (OEM licence),76980,Victory computers via https://alfa.kz/pc/soft/os/microsoft/oem/8578987,2026-11-11
+web developer,CPU,AMD Ryzen 7 7700 OEM 100-000000592 (8c/16t; no cooler; iGPU),92745,Flexcom.kz via https://e-katalog.kz/AMD-7700-OEM.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+web developer,CPU cooler,DeepCool AG400 Digital WH R-AG400-WHNDMN-G-1 (AM5 tower cooler),15650,Forcecom.kz via https://e-katalog.kz/DEEPCOOL-AG400-DIGITAL-WHITE.htm (delivery from Almaty),2026-11-11
+web developer,Motherboard,Gigabyte A620M GAMING X AX (AM5; mATX; 4xDDR5; Wi-Fi 6E),66584,Vendara.kz via https://e-katalog.kz/GIGABYTE-A620M-GAMING-X-AX.htm (delivery from Almaty),2026-11-11
+web developer,RAM,Corsair Vengeance CMK32GX5M2B6400Z32 DDR5-6400 32GB (2x16GB kit),295448,Flexcom via https://alfa.kz/parts/ram/corsair/ddr5/8526044 (listed 11 Nov 12:53),2026-11-11
+web developer,SSD,Kingston NV3 SNV3S/1000G 1TB M.2 NVMe PCIe 4.0,68748,Flexcom.kz via https://e-katalog.kz/KINGSTON-NV3.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+web developer,PSU,be quiet! Pure Power 12 M BN341 550W 80+ Gold,49821,Flexcom.kz via https://e-katalog.kz/BE-QUIET--BN341.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+web developer,Case,Zalman M5 Black (mATX; no PSU),25767,Flexcom.kz via https://e-katalog.kz/ZALMAN-M5.htm (delivery from Almaty),2026-11-11
+web developer,Monitor,AOC 27B3QA2/01 27in IPS 1920x1080 100Hz,59215,alfa.kz listing https://alfa.kz/peripherals/monitors/aoc/27b3qa2_01,2026-11-11
+web developer,OS,Windows 11 Professional 64-bit Russian DSP OEI DVD KZ-Only FQC-10548 (OEM licence),76980,Victory computers via https://alfa.kz/pc/soft/os/microsoft/oem/8578987,2026-11-11
+designer,CPU,AMD Ryzen 5 7600 BOX 100-100001015BOX (6c/12t; Wraith Stealth cooler in box; iGPU),99927,LS Computers via https://alfa.kz/parts/cpu/amd/ryzen_5/8277796 (listed 28 Oct; updated 23 Oct; oldest price in the sheet; re-check before ordering),2026-11-11
+designer,Motherboard,Gigabyte A620M GAMING X AX (AM5; mATX; 4xDDR5; Wi-Fi 6E),66584,Vendara.kz via https://e-katalog.kz/GIGABYTE-A620M-GAMING-X-AX.htm (delivery from Almaty),2026-11-11
+designer,RAM,Corsair Vengeance CMK32GX5M2B6400Z32 DDR5-6400 32GB (2x16GB kit),295448,Flexcom via https://alfa.kz/parts/ram/corsair/ddr5/8526044 (listed 11 Nov 12:53),2026-11-11
+designer,SSD,Kingston NV3 SNV3S/1000G 1TB M.2 NVMe PCIe 4.0,68748,Flexcom.kz via https://e-katalog.kz/KINGSTON-NV3.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+designer,PSU,be quiet! Pure Power 12 M BN341 550W 80+ Gold,49821,Flexcom.kz via https://e-katalog.kz/BE-QUIET--BN341.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+designer,Case,Zalman M5 Black (mATX; no PSU),25767,Flexcom.kz via https://e-katalog.kz/ZALMAN-M5.htm (delivery from Almaty),2026-11-11
+designer,Monitor,ASUS BE27AQ 27in IPS 2560x1440 75Hz 99% sRGB,130155,Flexcom.kz via https://e-katalog.kz/ASUS-BE27AQ.htm (delivery from Almaty; screenshot 2026-11-11),2026-11-11
+designer,OS,Windows 11 Professional 64-bit Russian DSP OEI DVD KZ-Only FQC-10548 (OEM licence),76980,Victory computers via https://alfa.kz/pc/soft/os/microsoft/oem/8578987,2026-11-11

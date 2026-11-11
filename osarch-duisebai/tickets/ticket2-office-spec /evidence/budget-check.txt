@@ -1,0 +1,34 @@
+PROVES: the totals in README.md and builds.md are computed from budget.csv, the grand total is under the 3,000,000 KZT budget, and every role has RAM, SSD, OS and Monitor rows.
+Captured: 2026-11-11 on Linux (GNU awk). The commands use plain POSIX awk and should work in macOS Terminal, but this output was not produced on a Mac.
+
+$ awk -F, '{print NF}' budget.csv | sort | uniq -c
+     34 6
+
+$ awk -F, 'NR>1{t[$1]+=$4; s+=$4} END{for(r in t) printf "%-14s %9d\n", r, t[r]; printf "%-14s %9d\n", "TOTAL", s; printf "%-14s %9d\n", "RESERVE", 3000000-s}' budget.csv | sort
+RESERVE           126699
+TOTAL            2873301
+accountant        566423
+designer          813430
+sales             742490
+web developer     750958
+
+$ for each role and component in RAM SSD OS Monitor: count matching rows
+accountant     RAM      rows=1
+accountant     SSD      rows=1
+accountant     OS       rows=1
+accountant     Monitor  rows=1
+sales          RAM      rows=1
+sales          SSD      rows=1
+sales          OS       rows=1
+sales          Monitor  rows=1
+web developer  RAM      rows=1
+web developer  SSD      rows=1
+web developer  OS       rows=1
+web developer  Monitor  rows=1
+designer       RAM      rows=1
+designer       SSD      rows=1
+designer       OS       rows=1
+designer       Monitor  rows=1
+
+$ awk -F, 'NR>1 && $6!="2026-11-11"{bad++} END{print "rows without the price date 2026-11-11:", bad+0}' budget.csv
+rows without the price date 2026-11-11: 0
