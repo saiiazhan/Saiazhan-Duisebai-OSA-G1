@@ -1,0 +1,4 @@
+$ file staff-broken.csv
+staff-broken.csv: Non-ISO extended-ASCII text, with CRLF line terminators
+$ file -e csv staff-broken.csv
+staff-broken.csv: Non-ISO extended-ASCII text, with CRLF line terminators

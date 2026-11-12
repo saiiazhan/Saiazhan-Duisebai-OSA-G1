@@ -1,0 +1,13 @@
+$ file staff-fixed.csv
+staff-fixed.csv: Unicode text, UTF-8 (with BOM) text
+$ file -e csv staff-fixed.csv
+staff-fixed.csv: Unicode text, UTF-8 (with BOM) text
+$ xxd -l 16 staff-fixed.csv
+00000000: efbb bfd0 a2d0 b0d0 b12e e284 963b d0a4  .............;..
+$ CR:        0  LF:       26
+$ awk -F';' '{ print $NF "|" }' staff-fixed.csv | head -3
+Дата приёма|
+12.03.2019|
+01.09.2017|
+$ shasum -a 256 staff-broken.csv
+919027f1f8c71d85cba3f12aad0f6c927d4e0450cfb2a2d63378a69f14cab270  staff-broken.csv
