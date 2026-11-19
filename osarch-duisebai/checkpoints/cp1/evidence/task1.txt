@@ -1,0 +1,39 @@
+$ sysctl -n machdep.cpu.brand_string
+Apple M5
+$ sysctl hw.physicalcpu hw.logicalcpu
+hw.physicalcpu: 10
+hw.logicalcpu: 10
+$ sysctl hw.perflevel0.physicalcpu hw.perflevel1.physicalcpu
+hw.perflevel0.physicalcpu: 4
+hw.perflevel1.physicalcpu: 6
+$ sysctl kern.hv_support
+kern.hv_support: 1
+$ uname -m
+arm64
+$ sysctl -n hw.memsize
+17179869184
+$ top -l 1 | grep PhysMem
+PhysMem: 15G used (2355M wired, 3934M compressor), 137M unused.
+$ memory_pressure | tail -1
+System-wide memory free percentage: 59%
+$ diskutil info / | grep -E "Device Node|Disk Size|Container Total|Container Free|Solid State"
+   Device Node:               /dev/disk3s1s1
+   Disk Size:                 494.3 GB (494332366848 Bytes) (exactly 965492904 512-Byte-Units)
+   Container Total Space:     494.3 GB (494332366848 Bytes) (exactly 965492904 512-Byte-Units)
+   Container Free Space:      46.5 GB (46471544832 Bytes) (exactly 90764736 512-Byte-Units)
+   Solid State:               Yes
+$ df -h /
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    12Gi    43Gi    22%    455k  454M    0%   /
+$ diskutil list disk0
+/dev/disk0 (internal, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:             Apple_APFS_ISC Container disk1         576.7 MB   disk0s1
+   2:                 Apple_APFS Container disk3         494.3 GB   disk0s2
+   3:        Apple_APFS_Recovery Container disk2         5.4 GB     disk0s3
+$ sw_vers
+ProductName:		macOS
+ProductVersion:		26.3.1
+ProductVersionExtra:	(a)
+BuildVersion:		25D771280a
